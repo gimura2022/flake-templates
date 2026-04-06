@@ -1,7 +1,7 @@
 {
   description = "flake templates";
 
-  outputs = {
+  outputs = { ... }: {
     templates = {
       rust-app = {
         path = ./templates/rust-app;
