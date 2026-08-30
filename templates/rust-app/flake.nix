@@ -50,7 +50,9 @@
 
         devShells.default = pkgs.mkShell {
           inherit buildInputs;
+
           nativeBuildInputs = nativeBuildInputs ++ [ toolchain ];
+          LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;
         };
       }
     );
